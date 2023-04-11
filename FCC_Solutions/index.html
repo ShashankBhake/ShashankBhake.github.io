@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Viewer</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        /* Add some basic styling to make the code viewer look good */
+        .code-wrapper {
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+        }
+
+        .code-header {
+            margin: 0;
+            padding: 5px 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .code-header .arrow {
+            display: inline-block;
+            width: 0.8em;
+            height: 0.8em;
+            margin-right: 10px;
+            border-style: solid;
+            border-width: 0.15em 0.15em 0 0;
+            transform: rotate(-45deg);
+            transition: transform 0.33s ease;
+        }
+
+        .code-wrapper.open .code-header .arrow {
+            transform: rotate(135deg);
+        }
+
+        .code-content {
+            margin: 0;
+            padding: 10px;
+            display: none;
+        }
+
+        /* Show the code content when the code header is clicked */
+        .code-wrapper.open .code-content {
+            display: block;
+        }
+        @media only screen and (max-width: 768px) {
+	.code-wrapper {
+		padding: 10px;
+	}
+	.code-header {
+		font-size: 20px;
+	}
+	.code {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.code-wrapper {
+		padding: 10px;
+	}
+	.code-header {
+		font-size: 18px;
+	}
+	.code {
+		font-size: 14px;
+	}
+}
+    </style>
+</head>
+
+<body>
+    <h1>FRESHMAN CODE CUP SOLUTIONS<br></h1>
+    <div class="code-wrapper">
+        <div class="code-header">
+            <span>Divisible Digit Sums</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="code-content">
+            <pre><code><h2>C: </h2>#include &lt;stdio.h&gt;
+ 
+int main() 
+{
+    int N, sum = 0;
+    scanf("%d", &N);
+
+    int n = N;
+
+    // Calculate sum of digits
+    while (n > 0) 
+    {
+        sum += n % 10;
+        n /= 10;
+    }
+
+    // Check if S(N) divides N
+    if (N % sum == 0) 
+    {
+        printf("Yes\n");
+    } 
+    else 
+    {
+        printf("No\n");
+    }
+    
+    return 0;
+}
+<h2>C++: </h2>#include &lt;iostream&gt;
+using namespace std;
+
+int main() 
+{
+    int N;
+    cin >> N;
+    
+    int sum = 0;
+    int n = N;
+    
+    while (n > 0) // calculate the sum of digits of N 
+    {
+        sum += n % 10;
+        n /= 10;
+    }
+    
+    if (N % sum == 0) 
+    { // check if sum divides N
+        cout << "Yes" << endl;
+    } 
+    else 
+    {
+        cout << "No" << endl;
+    }
+    
+    return 0;
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="code-wrapper">
+        <div class="code-header">
+            <span>Majority</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="code-content">
+            <pre><code><h2>C: </h2>#include &lt;stdio.h&gt;
+int main() 
+{
+    int n, i, count_for = 0, count_against = 0;
+    char opinion[7];
+    
+    scanf("%d", &n);
+    
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%s", opinion);
+        if (opinion[0] == 'F') 
+        {
+            count_for++;
+        }
+        else 
+        {
+            count_against++;
+        }
+    }
+    
+    if (count_for > count_against) 
+    {
+        printf("Yes\n");
+    }
+    else 
+    {
+        printf("No\n");
+    }
+    
+    return 0;
+}
+<h2>C++: </h2>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n, agree_count = 0;
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
+    {
+        string opinion;
+        cin >> opinion;
+        if (opinion == "For")
+        {
+            agree_count++;
+        }
+        else
+        {
+            agree_count--;
+        }
+    }
+
+    if (agree_count > 0)
+    {
+        cout << "Yes" << endl;
+    }
+    else
+    {
+        cout << "No" << endl;
+    }
+
+    return 0;
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="code-wrapper">
+        <div class="code-header">
+            <span>Count Distinct Integers</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="code-content">
+            <pre><code><h2>C: </h2>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i, num;
+    int freq[1000001] = {0}; // initialize frequency array with all zeros
+    
+    scanf("%d", &n);
+    
+    for (i = 0; i < n; i++) {
+        scanf("%d", &num);
+        freq[num]++; // increment the frequency of the number
+    }
+    
+    int count = 0;
+    for (i = 0; i < 1000001; i++) {
+        if (freq[i] > 0) {
+            count++;
+        }
+    }
+    
+    printf("%d\n", count);
+    
+    return 0;
+}
+
+<h2>C++: </h2>#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    set&lt;int&gt; s;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        s.insert(x);
+    }
+    cout << s.size() << endl;
+    return 0;
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="code-wrapper">
+        <div class="code-header">
+            <span>Reversing Substrings</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="code-content">
+            <pre><code><h2>C: </h2>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    int l, r;
+    char s[100001];
+
+    scanf("%d %d %s", &l, &r, s);
+
+    int n = strlen(s);
+
+    for (int i = 0; i < n; i++)
+    {
+        if (i >= l - 1 && i <= r - 1)
+        {
+            // reverse the substring from l to r
+            printf("%c", s[l + r - i - 2]);
+        }
+        else
+        {
+            printf("%c", s[i]);
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}
+<h2>C++: </h2>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main() {
+    int L, R;
+    string S;
+    cin >> L >> R >> S;
+    reverse(S.begin() + L - 1, S.begin() + R);
+    cout << S << endl;
+    return 0;
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="code-wrapper">
+        <div class="code-header">
+            <span>Maximizing Digit Sums</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="code-content">
+            <pre><code><h2>C: </h2>#include &lt;stdio.h&gt;
+int main()
+{
+    long long int N;
+    scanf("%lld", &N);
+    
+    N++;
+    int x = 0;
+    
+    while (N >= 10)
+    {
+        N /= 10;
+        x++;
+    }
+
+    printf("%lld", 9*x + N - 1);
+    
+    return 0;
+}
+<h2>C++: </h2>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+    string s;
+    cin >> s;
+    s = to_string(stoll(s) + 1);
+    cout << s[0] - '1' + 9 * (s.length() - 1);
+    return 0;
+}</code></pre>
+        </div>
+    </div>
+
+    <script>
+        // Add a click event listener to each code header
+        var codeHeaders = document.querySelectorAll('.code-header');
+
+codeHeaders.forEach(function (header) {
+    header.addEventListener('click', function () {
+        var codeWrapper = this.parentNode;
+        codeWrapper.classList.toggle('open');
+    });
+});
+</script>
+</body>
+
+</html>
