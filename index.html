@@ -1,3 +1,679 @@
-Welcome to Shashank's page!
-
-<a href="/resume.html"> Resume</a>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Shashank Bhake</title><style>
+    /* cspell:disable-file */
+    /* webkit printing magic: print all background colors */
+    html {
+        -webkit-print-color-adjust: exact;
+    }
+    * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    @media only screen {
+        body {
+            margin: 2em auto;
+            max-width: 900px;
+            color: rgb(55, 53, 47);
+        }
+    }
+    
+    body {
+        line-height: 1.5;
+        white-space: pre-wrap;
+    }
+    
+    a,
+    a.visited {
+        color: inherit;
+        text-decoration: underline;
+    }
+    
+    .pdf-relative-link-path {
+        font-size: 80%;
+        color: #444;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0.75em;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+        margin-top: 1.875rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+        margin-top: 1.25rem;
+    }
+    
+    .source {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1.5em;
+        word-break: break-all;
+    }
+    
+    .callout {
+        border-radius: 3px;
+        padding: 1rem;
+    }
+    
+    figure {
+        margin: 1.25em 0;
+        page-break-inside: avoid;
+    }
+    
+    figcaption {
+        opacity: 0.5;
+        font-size: 85%;
+        margin-top: 0.5em;
+    }
+    
+    mark {
+        background-color: transparent;
+    }
+    
+    .indented {
+        padding-left: 1.5em;
+    }
+    
+    hr {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+        visibility: visible;
+        border: none;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    @media only print {
+        img {
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    }
+    
+    @page {
+        margin: 1in;
+    }
+    
+    .collection-content {
+        font-size: 0.875rem;
+    }
+    
+    .column-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .column {
+        padding: 0 1em;
+    }
+    
+    .column:first-child {
+        padding-left: 0;
+    }
+    
+    .column:last-child {
+        padding-right: 0;
+    }
+    
+    .table_of_contents-item {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        padding: 0.125rem;
+    }
+    
+    .table_of_contents-indent-1 {
+        margin-left: 1.5rem;
+    }
+    
+    .table_of_contents-indent-2 {
+        margin-left: 3rem;
+    }
+    
+    .table_of_contents-indent-3 {
+        margin-left: 4.5rem;
+    }
+    
+    .table_of_contents-link {
+        text-decoration: none;
+        opacity: 0.7;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid rgba(55, 53, 47, 0.09);
+        border-collapse: collapse;
+    }
+    
+    table {
+        border-left: none;
+        border-right: none;
+    }
+    
+    th,
+    td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+    }
+    
+    th {
+        color: rgba(55, 53, 47, 0.6);
+    }
+    
+    ol,
+    ul {
+        margin: 0;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+    }
+    
+    li > ol:first-child,
+    li > ul:first-child {
+        margin-block-start: 0.6em;
+    }
+    
+    ul > li {
+        list-style: disc;
+    }
+    
+    ul.to-do-list {
+        padding-inline-start: 0;
+    }
+    
+    ul.to-do-list > li {
+        list-style: none;
+    }
+    
+    .to-do-children-checked {
+        text-decoration: line-through;
+        opacity: 0.375;
+    }
+    
+    ul.toggle > li {
+        list-style: none;
+    }
+    
+    ul {
+        padding-inline-start: 1.7em;
+    }
+    
+    ul > li {
+        padding-left: 0.1em;
+    }
+    
+    ol {
+        padding-inline-start: 1.6em;
+    }
+    
+    ol > li {
+        padding-left: 0.2em;
+    }
+    
+    .mono ol {
+        padding-inline-start: 2em;
+    }
+    
+    .mono ol > li {
+        text-indent: -0.4em;
+    }
+    
+    .toggle {
+        padding-inline-start: 0em;
+        list-style-type: none;
+    }
+    
+    /* Indent toggle children */
+    .toggle > li > details {
+        padding-left: 1.7em;
+    }
+    
+    .toggle > li > details > summary {
+        margin-left: -1.1em;
+    }
+    
+    .selected-value {
+        display: inline-block;
+        padding: 0 0.5em;
+        background: rgba(206, 205, 202, 0.5);
+        border-radius: 3px;
+        margin-right: 0.5em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        white-space: nowrap;
+    }
+    
+    .collection-title {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    
+    .page-description {
+        margin-bottom: 2em;
+    }
+    
+    .simple-table {
+        margin-top: 1em;
+        font-size: 0.875rem;
+        empty-cells: show;
+    }
+    .simple-table td {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table th {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table-header-color {
+        background: rgb(247, 246, 243);
+        color: black;
+    }
+    .simple-table-header {
+        font-weight: 500;
+    }
+    
+    time {
+        opacity: 0.5;
+    }
+    
+    .icon {
+        display: inline-block;
+        max-width: 1.2em;
+        max-height: 1.2em;
+        text-decoration: none;
+        vertical-align: text-bottom;
+        margin-right: 0.5em;
+    }
+    
+    img.icon {
+        border-radius: 3px;
+    }
+    
+    .user-icon {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+    }
+    
+    .user-icon-inner {
+        font-size: 0.8em;
+    }
+    
+    .text-icon {
+        border: 1px solid #000;
+        text-align: center;
+    }
+    
+    .page-cover-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        max-height: 30vh;
+    }
+    
+    .page-header-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .page-header-icon-with-cover {
+        margin-top: -0.72em;
+        margin-left: 0.07em;
+    }
+    
+    .page-header-icon img {
+        border-radius: 3px;
+    }
+    
+    .link-to-page {
+        margin: 1em 0;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+    }
+    
+    p > .user {
+        opacity: 0.5;
+    }
+    
+    td > .user,
+    td > time {
+        white-space: nowrap;
+    }
+    
+    input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 0.6em;
+        vertical-align: middle;
+    }
+    
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    .image {
+        border: none;
+        margin: 1.5em 0;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+    
+    .code,
+    code {
+        background: rgba(135, 131, 120, 0.15);
+        border-radius: 3px;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        tab-size: 2;
+    }
+    
+    code {
+        color: #eb5757;
+    }
+    
+    .code {
+        padding: 1.5em 1em;
+    }
+    
+    .code-wrap {
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    
+    .code > code {
+        background: none;
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+    }
+    
+    blockquote {
+        font-size: 1.25em;
+        margin: 1em 0;
+        padding-left: 1em;
+        border-left: 3px solid rgb(55, 53, 47);
+    }
+    
+    .bookmark {
+        text-decoration: none;
+        max-height: 8em;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    .bookmark-title {
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 1.75em;
+        white-space: nowrap;
+    }
+    
+    .bookmark-text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bookmark-info {
+        flex: 4 1 180px;
+        padding: 12px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .bookmark-image {
+        width: 33%;
+        flex: 1 1 180px;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        border-radius: 1px;
+    }
+    
+    .bookmark-description {
+        color: rgba(55, 53, 47, 0.6);
+        font-size: 0.75em;
+        overflow: hidden;
+        max-height: 4.5em;
+        word-break: break-word;
+    }
+    
+    .bookmark-href {
+        font-size: 0.75em;
+        margin-top: 0.25em;
+    }
+    
+    .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+    .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+    .serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+    .mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+    .pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+    .pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+    .pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+    .pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+    .pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    .pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+    .pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+    .pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+    .pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+    .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    .highlight-default {
+        color: rgba(55, 53, 47, 1);
+    }
+    .highlight-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+    }
+    .highlight-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+    }
+    .highlight-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+    }
+    .highlight-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+    }
+    .highlight-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+    }
+    .highlight-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+    }
+    .highlight-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+    }
+    .highlight-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .highlight-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+    }
+    .highlight-gray_background {
+        background: rgba(241, 241, 239, 1);
+    }
+    .highlight-brown_background {
+        background: rgba(244, 238, 238, 1);
+    }
+    .highlight-orange_background {
+        background: rgba(251, 236, 221, 1);
+    }
+    .highlight-yellow_background {
+        background: rgba(251, 243, 219, 1);
+    }
+    .highlight-teal_background {
+        background: rgba(237, 243, 236, 1);
+    }
+    .highlight-blue_background {
+        background: rgba(231, 243, 248, 1);
+    }
+    .highlight-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+    }
+    .highlight-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+    }
+    .highlight-red_background {
+        background: rgba(253, 235, 236, 1);
+    }
+    .block-color-default {
+        color: inherit;
+        fill: inherit;
+    }
+    .block-color-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+    }
+    .block-color-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+    }
+    .block-color-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+    }
+    .block-color-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+    }
+    .block-color-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+    }
+    .block-color-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+    }
+    .block-color-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+    }
+    .block-color-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .block-color-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+    }
+    .block-color-gray_background {
+        background: rgba(241, 241, 239, 1);
+    }
+    .block-color-brown_background {
+        background: rgba(244, 238, 238, 1);
+    }
+    .block-color-orange_background {
+        background: rgba(251, 236, 221, 1);
+    }
+    .block-color-yellow_background {
+        background: rgba(251, 243, 219, 1);
+    }
+    .block-color-teal_background {
+        background: rgba(237, 243, 236, 1);
+    }
+    .block-color-blue_background {
+        background: rgba(231, 243, 248, 1);
+    }
+    .block-color-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+    }
+    .block-color-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+    }
+    .block-color-red_background {
+        background: rgba(253, 235, 236, 1);
+    }
+    .select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+    .select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+    .select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+    .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+    .select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+    .select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+    .select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+    .select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+    .select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+    .select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+    .select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+    .select-value-color-pageGlass { background-color: undefined; }
+    .select-value-color-washGlass { background-color: undefined; }
+    
+    .checkbox {
+        display: inline-flex;
+        vertical-align: text-bottom;
+        width: 16;
+        height: 16;
+        background-size: 16px;
+        margin-left: 2px;
+        margin-right: 5px;
+    }
+    
+    .checkbox-on {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+    
+    .checkbox-off {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+        
+    </style></head><body><article id="68ce0fd3-5f08-44b5-948b-dbcb7e065936" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://o.remove.bg/downloads/b5f19f9a-f0bb-4f82-b880-6c8bf7d9f2a9/image-removebg-preview.png"/></div><h1 class="page-title">Shashank Bhake</h1><p class="page-description"></p></header><div class="page-body"><hr id="1ded1ffe-6987-49ce-a8d9-ce3a964e2a8e"/><div id="725122ca-fd9a-4b85-bf42-dd28b65c799a" class="column-list"><div id="47a6cac0-ed3c-4622-a37f-72b9c283ad10" style="width:31.25%" class="column"><h1 id="45ecc6b5-9e45-4c5d-aaa6-e5d3bfc09629" class="">Contact</h1><p id="3df13428-1732-4147-8654-c474ca33d129" class="block-color-gray">Hyderabad, Telangana, India</p><p id="80a9d84a-08d5-4dd5-b1ca-a0b7ca548709" class="block-color-gray">+91 93981 68184</p><p id="f1c3a332-ce22-466c-b684-d2e5c8d56a9d" class="block-color-gray"><a href="mailto:shashankbhake123@gmail.com">shashankbhake123@gmail.com</a></p><p id="9a0b108b-a024-4a80-86df-824c809d735b" class=""><a href="https://www.linkedin.com/in/shashank-bhake-ba40ab233/">LinkedIn</a></p></div><div id="2da199e3-148d-4430-8df3-479764ac2900" style="width:68.75%" class="column"><h1 id="53adcdb8-f2ce-49f8-aef0-c96230961673" class="">Profile</h1><p id="baa0a72b-bff1-4773-904f-c18ec35453cb" class="block-color-gray">I am a dedicated computer science student with proficiency in programming languages like C++, Java, and Python. My practical experience encompasses a range of projects spanning web development and machine learning. I’m excited about my goal to create an interactive portfolio website using three.js. Additionally, I have a keen interest in pursuing ML research. I actively participate in competitive coding, specializing in Data Structures and Algorithms. I&#x27;m dedicated to continuous improvement and strive for excellence in contests. Eager to contribute my skills in diverse tech roles.</p></div></div><div id="c1abc86a-b450-4984-ab1d-c912943cc467" class="column-list"><div id="2dd4a914-d10e-4a38-bfac-2cebe6b305c4" style="width:31.25%" class="column"><hr id="b0781a76-3fc4-4da1-a007-70c0a2296465"/><h1 id="87df82d9-1fb5-4c1f-a88a-0c28c2e220aa" class="">Skills</h1><h3 id="68f3b63c-7567-4f6c-96e2-6737f6e243a4" class="">Web Technologies</h3><p id="5ee1e0d7-0cb7-42cb-ba07-938f52416efc" class="">ExpressJS</p><p id="badca4de-946b-4dab-b3f6-4b843437f6bb" class="">◾◾◾</p><p id="8d33ff48-0567-4bd7-83fd-bc3a67fc399a" class="">ReactJS</p><p id="3436e347-4b5a-4dbe-948e-e2b9fba7e3b5" class="">◾◾◾◾</p><p id="90a076fb-90d5-43fa-b70f-254093c03465" class="">NodeJS</p><p id="49c95bc0-a773-4883-9056-7a26b4fa6083" class="">◾◾◾◾</p><hr id="9a102380-556a-4922-a2ba-75928d88df4b"/><h3 id="aa005f72-c3f7-4f9d-8fa1-851426091ee9" class="">Languages</h3><p id="9ef37acc-4950-414a-b928-b9bbaaf0facb" class="">C/C++</p><p id="7b42e000-6681-4152-bca9-90d26865f526" class="">◾◾◾◾◾</p><p id="957c97c3-2214-4afb-ace7-608001bd8353" class="">Java</p><p id="d4f0d188-aa4c-4468-a4d8-c4aa092407f9" class="">◾◾◾◾</p><p id="a31b9ac2-38e8-489c-9424-a5b01ce62f7b" class="">Python</p><p id="bc5ffec4-6416-4e67-8fe1-bcecb0c08969" class="">◾◾◾◾ </p><hr id="ec6dc257-e905-49b6-a4cf-5668e9fa2269"/><h3 id="281ee1b3-9095-4f91-8274-e8a1e7f32169" class="">Databases and DevTools</h3><p id="64945b23-6d16-4325-a8a8-bcbc16774213" class="">MySQL</p><p id="ccb3f23c-d6fb-45a7-b4b9-49c859853b96" class="">◾◾◾◾</p><p id="4dd6042e-56c7-4a7c-82c2-ae98386b78c5" class="">MongoDB</p><p id="9c6bd4c9-8589-44e1-b53b-4f112101c17d" class="">◾◾◾◾</p><p id="e88508cb-af97-4306-8e48-142829cbe30f" class="">Git/GitHub</p><p id="cecb0cdb-adb7-465c-a928-f2eaf8404c6e" class="">◾◾◾◾</p><p id="263cde51-5c6a-452c-b58e-1c79efb4c850" class="">Jupyter</p><p id="b1e5458d-bc1a-493f-a403-fd4f482f05f3" class="">◾◾◾◾ </p></div><div id="f57a8c60-796d-43f1-b869-d25f39aa0633" style="width:68.75%" class="column"><hr id="86e0d19e-e611-488e-bde6-a91804150ce7"/><h1 id="fa697692-cac4-4f83-ad0a-a90790f29b13" class="">Education</h1><p id="71fa621a-3140-458c-ada1-d60e003f0e31" class=""><strong>CMR College Of Engineering And Technology</strong></p><p id="1eecaa8c-8630-48b7-908a-fec9ee144ca9" class="">Bachelor Of Technology In Computer Science and Engineering, GPA: 8.97</p><p id="8a45c4d3-84b7-45d2-b952-c2b9d1d63ae7" class=""><em>Nov 2021 - Apr 2025</em></p><hr id="593bc5b0-ebb0-4042-a274-175049119277"/><p id="76b93003-54bf-4917-b8cd-76735dfe28de" class=""><strong>Narayana Junior College</strong></p><p id="e499355e-f7f3-4bad-8a75-8f9bbe6512a5" class="">Intermediate (MPC),  GPA: 9.28</p><p id="3bc1fb34-3c82-41c0-b835-ad4043199136" class=""><em>Jun 2019 - Mar 2021</em></p><hr id="d3b8efe5-c234-4836-a78f-7fc831a820a1"/><p id="42180c30-570f-4da2-ba78-38e11e06ac89" class=""><strong>Narayana E-Techno School</strong></p><p id="20e6caff-9fa9-4521-9fb2-ced0177eb0d8" class="">High School, GPA: 10</p><p id="1cb33d75-1132-4db2-8856-b4a905a984ed" class="">Jun 2015 - Jun 2019</p><h1 id="d6c6139c-fbef-4af4-b375-a26641b2b54d" class="">Projects</h1><h3 id="179b10b2-077d-4b25-bc66-1a1daeb3566f" class=""><strong>Accent Detection </strong></h3><p id="c0545fb4-b49a-410f-b47f-d1e96e09df41" class=""><a href="https://github.com/ShashankBhake/Megathon-2022">https://github.com/ShashankBhake/Megathon-2022</a></p><p id="187f0ce0-8239-44af-8670-cde559f8d8b7" class="block-color-gray"><em>TensorFlow, FFmpeg, Librosa</em></p><p id="2212bd82-40c3-44c1-840e-fbdef3cff312" class="">A Machine Learning model which uses Mel-frequency Cepstral Coefficients generated to analyze the given audio files and classify the accent.</p><hr id="599d60d6-2c03-4cb5-80c8-e642742b3a42"/><h3 id="0a155346-af20-479a-924e-086b7290e069" class=""><strong>Face Recognition Based Attendance System </strong></h3><p id="788f918a-6fd3-4fca-814d-b6fffab3eed0" class=""><a href="https://github.com/ShashankBhake/FaceRec-Attendance">https://github.com/ShashankBhake/FaceRec-Attendance</a></p><p id="7270dc36-8a3a-49f3-a0b5-f31693677937" class="block-color-gray"><em>Python, OpenCV, Tkinter, Pandas, PIL</em></p><p id="995a69c4-9f3e-4749-8040-7342405174a4" class="">An OpenCV project using Python which uses Local Binary Patterns to recognize the face and mark the attendance.</p><hr id="8696d665-e1ef-4b46-8620-823386ebdd1f"/><h3 id="733f19b2-728f-4391-b25e-0b59e556b7a7" class=""><strong>MSCS Dashboard</strong></h3><p id="3d074635-5ff8-4ce1-9239-770ebffaaaaf" class=""><a href="https://github.com/ShashankBhake/MSCS-Hack">https://github.com/ShashankBhake/MSCS-Hack</a></p><p id="a6dee57b-a29d-4cde-ac1a-efaaaf4c1911" class="block-color-gray"><em>ReactJS, HTML, CSS, JavaScript, MongoDB</em></p><p id="62313b72-1f56-4d01-9dfe-ea64f1866891" class="">Designed a comprehensive dashboard for the CRCS portal, optimizing registration, amendments, appeals, and annual returns management for registered societies.</p><hr id="e467be2a-d28c-45a8-8ccd-57f4b9d6e040"/><h3 id="39517cf1-d800-4158-8499-e317bdee2d84" class=""><strong>Stock Sentiment Analysis</strong></h3><p id="c175abb1-0892-4e00-b047-0a37dde585cd" class=""><a href="https://github.com/ShashankBhake/Stock-Sentiment-Analysis">https://github.com/ShashankBhake/Stock-Sentiment-Analysis</a></p><p id="cbb85232-3682-44b0-9e1b-a6975d10bc2e" class="block-color-gray"><em>Python, Scikit-Learn, Pandas</em></p><p id="c680412a-3f63-421d-a681-97ba958d62da" class="">Developed a Machine Learning model using Random Forest Classifier to predict stock market trends based on sentiment analysis of news headlines.</p></div></div><hr id="70f9b20c-99ac-40b1-a720-6e3b63844d88"/><h2 id="b1e39660-f0f7-4972-85b8-73698054241d" class=""> Achievements</h2><h3 id="73f4d3c1-a31f-4284-90cc-29c44f1c0485" class=""><strong>Finalist at Megathon 2022</strong></h3><div id="ba97d2bf-d48e-4828-983c-6381fd871fa6" class="column-list"><div id="b5587f80-6cc7-4f86-abbd-0d934b226c68" style="width:81.25%" class="column"><p id="c358464a-ebc9-4aca-8738-d962514d70bd" class="">Built a Machine Learning model and made it to Top 6. There were over 700 participants from all over India.
+    Oct 2022</p></div><div id="c53a4bff-756a-448c-9c70-c251fe1fbf38" style="width:18.749999999999993%" class="column"><p id="ea137bc8-678b-4d8c-a8e0-3f1e72842f21" class="">International Institute Of Information Technology-Hyderabad</p></div></div><h3 id="e20d72a5-8d56-4add-a082-166517ea8f74" class=""><strong>Rank 60 at CodeChef </strong></h3><div id="065f071d-cdde-4312-8328-3fbe9df1f904" class="column-list"><div id="119b9c9d-f0b5-499c-b88b-dd9799fe8dda" style="width:81.25%" class="column"><p id="a4766c4a-22a7-4f18-a403-894eacdc393a" class="">Got a Global Rank of 60 in CodeChef Starters 56(Div. 3) in just 3 months of my Competitive Coding Career.
+    Sept 2022</p></div><div id="f4553dbc-b148-41bc-ac9c-ae034381fa72" style="width:18.75%" class="column"><p id="d5c342b0-f943-4d9b-b2e9-fb46b15391c3" class="">CodeChef</p></div></div><h3 id="9e75baba-df90-4def-8193-8f8610293aa9" class=""><strong>Machine Learning Hackathon Runner-Up, BITS TechWeek &#x27;23 </strong></h3><div id="7fbafeba-06d6-457e-9f9d-b7c512c9477f" class="column-list"><div id="057ff4c7-3cc7-4289-833b-3113c3b60822" style="width:81.25%" class="column"><p id="4210e2c5-1b3f-4a81-a4ac-c2c034e968e0" class="">Built a Machine Learning model using Sentiment Analysis that generates insights of a Stock from News
+    Headlines.</p><p id="db74961c-2c1a-454a-a3a5-5027b0cb6637" class="">May 2023</p></div><div id="ceecbfe2-2cf5-4d52-920f-035bfdc9c0d1" style="width:18.750000000000007%" class="column"><p id="15f64c09-fe08-460e-88d1-4eb960530cf0" class="">BITS Pilani - Hyderabad</p></div></div><hr id="f745b1a8-a79a-46c5-8ed4-d9ac95ce75c2"/></div></article></body></html>
